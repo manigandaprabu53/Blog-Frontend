@@ -9,6 +9,7 @@ import UseLogout from '../Utils/UseLogOut';
 function View() {
 
   const param = useParams();
+  const logout = UseLogout();
   const [data, setData] = useState({});
 
   const fetchBlogData = async ()=>{
@@ -25,7 +26,7 @@ function View() {
     } catch (error) {
       toast.error(error?.response?.data?.message || "Error Occured! Please Try Again")
       if(error.response.status == 401){
-        UseLogout();
+        logout();
       }
     }
   }

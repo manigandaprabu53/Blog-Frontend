@@ -20,8 +20,8 @@ function Header() {
             <ul className={menuOpen ? "open" : ""}>
                 <li><NavLink to={"/"}>Home</NavLink></li>
                 <li><NavLink to={"/myblogs"}>My Blogs</NavLink></li>
-                <li><NavLink to={"/profile"}>Profile</NavLink></li>
                 <li><NavLink to={"/create"}>Create</NavLink></li>
+                <li><NavLink to={"/profile"}>Profile</NavLink></li>
             </ul>
         </nav>
     </>
