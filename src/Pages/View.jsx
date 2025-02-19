@@ -4,7 +4,7 @@ import { useParams } from 'react-router-dom';
 import api from "../Service/ApiService";
 import ApiRoutes from '../Utils/ApiRoutes';
 import toast from "react-hot-toast"
-import UseLogout from '../Utils/UseLogOut';
+import UseLogout from '../Utils/UseLogout';
 
 function View() {
 
