@@ -3,6 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import PasswordInput from '../Components/PasswordInput';
 import {validateEmail} from "../Utils/helper.js"
 import api from "../Service/ApiService.jsx";
+import toast from "react-hot-toast";
 import ApiRoutes from "../Utils/ApiRoutes.jsx";
 
 function Register() {
@@ -42,7 +43,7 @@ function Register() {
                 navigate("/login")
             }
         } catch (error) {
-            console.log(error)
+            toast.error(error?.response?.data?.message || "Error Occured! Please Try Again");
         }
     }
   return (
